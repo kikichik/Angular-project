@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   header = 'Recipe book';
+  public isMenuCollapsed = true;
   constructor() {}
 
   ngOnInit() {
