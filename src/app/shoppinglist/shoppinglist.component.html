@@ -1,7 +1,8 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-  <div class="col-xs-10">
-    <app-shoppinglistedit></app-shoppinglistedit>
+  <div class="col-xs-12">
+    <app-shoppinglistedit
+    (IngredientAdded)="IngredientWasAdded($event)"></app-shoppinglistedit>
     <hr/>
     <ul class="list-group">
       <a
@@ -14,5 +15,4 @@
     </ul>
   </div>
 </div>
-
 </div>

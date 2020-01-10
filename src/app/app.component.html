@@ -1,11 +1,13 @@
-<app-header></app-header>
+<app-header
+  (setActive)="onNavigate($event)">
+  </app-header>
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-5">
-      <app-recipebook></app-recipebook>
+      <app-recipebook *ngIf="isRecipeBookActive"></app-recipebook>
     </div>
     <div class="col-md-7">
-      <app-shoppinglist></app-shoppinglist>
+      <app-shoppinglist *ngIf="isShoppingListActive"></app-shoppinglist>
     </div>
   </div>
 </div>

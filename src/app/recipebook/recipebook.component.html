@@ -1,10 +1,16 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-6">
-      <app-recipelist></app-recipelist>
+      <app-recipelist 
+      (makeRecipe)="selectedRecipe = $event"></app-recipelist>
     </div>
     <div class="col-sm-6">
-      <app-recipedetail></app-recipedetail>
+      <app-recipedetail
+      *ngIf="selectedRecipe; else infoText"
+      [recipeDetail]="selectedRecipe"></app-recipedetail>
+      <ng-template #infoText>
+        <p>Please select a recipe!</p>
+      </ng-template>
     </div>
   </div>
 </div>
