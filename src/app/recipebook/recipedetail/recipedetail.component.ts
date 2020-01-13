@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Recipe } from '../recipe.model';
 import {RecipeService} from '../recipe.service';
+import {ShoppingListService} from '../../shoppinglist/shoppinglist.service';
+import {Ingredient} from '../../shared/ingredient.model';
 
 @Component({
   selector: 'app-recipedetail',
@@ -18,4 +20,8 @@ export class RecipedetailComponent implements OnInit {
   toggle() {
     this.isOpen = !this.isOpen;
   }
+
+  onAddToShoppingList() {
+    this.recipeService.addToShoppingList(this.recipeDetail.ingredients);
+   }
 }
