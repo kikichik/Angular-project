@@ -6,6 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  isOpen: boolean = false;
   header = 'Recipe book';
   public isMenuCollapsed = true;
   @Output() setActive = new EventEmitter<boolean>();
@@ -21,6 +22,10 @@ export class HeaderComponent implements OnInit {
 
   setShoppingListActive() {
     this.setActive.emit(false);
+  }
+
+  toggle() {
+    this.isOpen = !this.isOpen;
   }
 
 }

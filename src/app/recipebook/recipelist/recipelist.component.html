@@ -8,7 +8,6 @@
   <!--   брать значения из массива recipes и вставлять в  recipe name, description, imgSrc-->
   <div class="col-sm-12">
     <app-recipeitem *ngFor="let recipe of recipes"
-    [recipeItem]="recipe"
-    (recipeClicked)="onRecipeClicked(recipe)"></app-recipeitem>
+    [recipeItem]="recipe"></app-recipeitem>
   </div>
 </div>
