@@ -27,9 +27,12 @@
       </button>
       <ul class="dropdown-menu" *ngIf="isOpen" appDropdown>
         <li><a class="dropdown-item" (click)="this.onAddToShoppingList()" >To Shopping List</a></li>
-        <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
+        <li>
+          <a 
+          class="dropdown-item"
+          (click)="onEditRecipe()">Edit Recipe</a></li>
         <li class="dropdown-divider"></li>
-        <li><a class="dropdown-item"href="#">Delete Recipe</a></li>
+        <li><a class="dropdown-item">Delete Recipe</a></li>
       </ul>
     </div>
 

@@ -1,13 +1,16 @@
 <div class="row">
   <div class="col-sm-12">
-    <button class="btn btn-success pull-left">New Recipe</button>
+    <button class="btn btn-success pull-left" (click)="onNewRecipe()">New Recipe
+    </button>
   </div>
 </div>
 <hr>
 <div class="row">
   <!--   брать значения из массива recipes и вставлять в  recipe name, description, imgSrc-->
   <div class="col-sm-12">
-    <app-recipeitem *ngFor="let recipe of recipes"
-    [recipeItem]="recipe"></app-recipeitem>
+    <app-recipeitem *ngFor="let recipe of recipes; let i = index"
+    [recipeItem]="recipe"
+    [index]="i"></app-recipeitem>
   </div>
 </div>
+  

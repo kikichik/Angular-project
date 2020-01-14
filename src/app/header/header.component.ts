@@ -16,13 +16,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  setRecipebookActive() {
-    this.setActive.emit(true);
-  }
-
-  setShoppingListActive() {
-    this.setActive.emit(false);
-  }
 
   toggle() {
     this.isOpen = !this.isOpen;
