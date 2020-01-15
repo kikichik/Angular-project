@@ -10,13 +10,13 @@ import { RecipeitemComponent } from './recipebook/recipelist/recipeitem/recipeit
 import { RecipedetailComponent } from './recipebook/recipedetail/recipedetail.component';
 import { ShoppinglisteditComponent } from './shoppinglist/shoppinglistedit/shoppinglistedit.component';
 import { RecipebookComponent} from './recipebook/recipebook.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DropDownDirective } from './shared/dropdown.directive';
 import { RecipeService } from './recipebook/recipe.service';
 import { ShoppingListService } from './shoppinglist/shoppinglist.service';
 import { HomePageComponent } from './home-page/home-page.component';
 import { PleaseSelectComponent } from './please-select/please-select.component';
 import { RecipeEditComponent } from './recipebook/recipe-edit/recipe-edit.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,13 +33,15 @@ import { RecipeEditComponent } from './recipebook/recipe-edit/recipe-edit.compon
     PleaseSelectComponent,
     RecipeEditComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
   providers: [
-    ShoppingListService
+    ShoppingListService,
+    RecipeService
   ],
   bootstrap: [AppComponent]
 })
