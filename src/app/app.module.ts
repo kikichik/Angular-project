@@ -17,6 +17,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PleaseSelectComponent } from './please-select/please-select.component';
 import { RecipeEditComponent } from './recipebook/recipe-edit/recipe-edit.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {ConfigService} from './shared/config.service';
 
 @NgModule({
   declarations: [
@@ -37,11 +39,13 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
         BrowserModule,
         AppRoutingModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        HttpClientModule,
     ],
   providers: [
     ShoppingListService,
-    RecipeService
+    RecipeService,
+    ConfigService
   ],
   bootstrap: [AppComponent]
 })

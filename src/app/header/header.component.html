@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
-  <a class="navbar-brand" 
+  <a class="navbar-brand"
   routerLink="/">{{ header}}</a>
 <!--  <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">-->
 <!--    &#9776;-->
@@ -20,7 +20,7 @@
       <li class="nav-item"
       routerLink="/recipes"
       routerLinkActive="active">
-        <a 
+        <a
         class="nav-link"
          >Recipe list</a>
       </li>
@@ -33,8 +33,8 @@
         <div  class="dropdown" (click)="toggle()">
           <a class="nav-link dropdown-toggle" id="dropdownBasic1" >Manage</a>
           <div class="dropdown-menu" *ngIf="isOpen" appDropdown>
-            <a class="dropdown-item" style="cursor: pointer;">Save</a>
-            <a class="dropdown-item" style="cursor: pointer;">Extract</a>
+            <a class="dropdown-item" style="cursor: pointer;" (click)="onSave()" >Save Data</a>
+            <a class="dropdown-item" style="cursor: pointer;" (click)="onFetch()">Fetch Data</a>
           </div>
         </div>
       </li>
